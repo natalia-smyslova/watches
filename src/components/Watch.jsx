@@ -1,11 +1,14 @@
 import { RiCloseCircleLine } from 'react-icons/ri'
 import { useEffect, useState } from "react";
+import PropTypes from 'prop-types';
 import moment from "moment/moment";
 
-function Watch({ watches, removeWatch }) {
+
+function Watch({ newWatch, removeWatch }) {
 
     const localTimezone = new Date().getTimezoneOffset() / 60;
-    const diffHour = localTimezone + Number(watches.number);
+ 
+    const diffHour = localTimezone + Number(newWatch.number);
 
     const [hour, setHour] = useState(Number(moment().format('h')) + diffHour);
     const [minute, setMinute] = useState(moment().format('mm'));
@@ -22,13 +25,13 @@ function Watch({ watches, removeWatch }) {
       }, [diffHour]);
 
 
-    return watches.map((watch, index) =>
-        <li className="watches-row" key={index}>
+    return (
+        <li className="watches-row" key={newWatch.id}>
             <div className="watch__header">
-                <h4 className='watch__name'>{watch.name}</h4>
-            <div className="watch__number">({watch.number >= 0 ? '+' : '-'}{Math.abs(watch.number)})</div>
+                <h4 className='watch__name'>{newWatch.name}</h4>
+            <div className="watch__number">({newWatch.number >= 0 ? '+' : '-'}{Math.abs(newWatch.number)})</div>
             <div className="icons">
-                <RiCloseCircleLine onClick={() => removeWatch(watch.id)} className="delete-icon" />
+                <RiCloseCircleLine onClick={() => removeWatch(newWatch.id)} className="delete-icon" />
             </div>
              </div>
             <div className='watch__body'>
@@ -40,6 +43,14 @@ function Watch({ watches, removeWatch }) {
         </li>
     )
 
+}
+
+Watch.propTypes = {
+    newWatch: PropTypes.object.isRequired,
+    number: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    removeWatch: PropTypes.function,
 }
 
 export default Watch;

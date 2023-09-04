@@ -22,10 +22,14 @@ function WatchList(){
         <>
         <WatchForm onSubmit={addWatch} />
             <ul className="list">
+                {watches.map(( watch, index ) => 
                 <Watch
-                    watches={watches}
-                    removeWatch={removeWatch}
-                />
+                newWatch = {watch}
+                removeWatch={removeWatch}
+                key={index}
+            />
+                )}
+                
             </ul>
     </>
     )

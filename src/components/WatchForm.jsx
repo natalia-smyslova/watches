@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { nanoid } from "nanoid";
+import PropTypes from 'prop-types';
 
 function WatchForm(props){
 
@@ -45,5 +46,10 @@ function WatchForm(props){
         </form>
     )
 }
+
+WatchForm.propTypes = {
+    onSubmit: PropTypes.function,
+}
+
 
 export default WatchForm;
