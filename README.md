@@ -1,4 +1,4 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/im8uw67sinixp1yv/branch/main?svg=true)](https://ci.appveyor.com/project/natalia-smyslova/watches/branch/main)
+![image](https://github.com/natalia-smyslova/watches/assets/86496377/18fc390e-2bd9-43eb-b5c1-7aed2cbac66e)[![Build status](https://ci.appveyor.com/api/projects/status/im8uw67sinixp1yv/branch/main?svg=true)](https://ci.appveyor.com/project/natalia-smyslova/watches/branch/main)
 
 [![Netology AHJ](https://github.com/natalia-smyslova/watches/actions/workflows/web.yml/badge.svg)](https://github.com/natalia-smyslova/watches/actions/workflows/web.yml)
 
@@ -11,7 +11,7 @@
 * London,
 * Tokyo.
 
-![Watches](./assets/watches.png)
+![Watches](https://github.com/natalia-smyslova/ra16-homeworks/raw/master/lifecycle-http/watches/assets/watches.png)
 
 Общая механика:
 
