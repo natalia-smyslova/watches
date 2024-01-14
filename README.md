@@ -2,6 +2,8 @@
 
 [![Netology AHJ](https://github.com/natalia-smyslova/watches/actions/workflows/web.yml/badge.svg)](https://github.com/natalia-smyslova/watches/actions/workflows/web.yml)
 
+[ДЕМО](https://natalia-smyslova.github.io/watches/)
+
 Мировые часы
 ===
 
